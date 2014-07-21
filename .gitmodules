@@ -1,3 +1,6 @@
+[submodule "quickrant-api"]
+	path = quickrant-api
+	url = git@github.com:mikechabot/quickrant-api
 [submodule "quickrant-admin"]
 	path = quickrant-admin
 	url = git@github.com:mikechabot/quickrant-admin
