@@ -16,7 +16,6 @@
   <modules>
       <module>/quickrant</module>
       <module>/quickrant-admin</module>
-      <module>/quickrant-api</module>
   </modules>
   
   <dependencies>
