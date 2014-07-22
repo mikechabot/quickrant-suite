@@ -1,21 +1,29 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  
+
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.quickrant</groupId>
-  <artifactId>master</artifactId>
+  <artifactId>suite</artifactId>
   <packaging>pom</packaging>
-  <version>0.2</version>
-  <name>master-project</name>
+  <version>0.3</version>
+  <name>master-suite</name>
   <url>http://maven.apache.org</url>
+  
+  <repositories>
+    <repository>
+      <id>my-repo</id>
+      <url>file://${M2_REPO}/</url>
+    </repository>
+  </repositories>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
   
   <modules>
-      <module>/quickrant</module>
-      <module>/quickrant-admin</module>
+    <module>/quickrant-admin</module>
+    <module>/quickrant-api</module>
+    <module>/quickrant</module>
   </modules>
   
   <dependencies>
@@ -26,19 +34,9 @@
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>log4j</groupId>
-      <artifactId>log4j</artifactId>
-      <version>1.2.17</version>
-    </dependency>
-    <dependency>
-      <groupId>org.postgresql</groupId>
-      <artifactId>postgresql</artifactId>
-      <version>9.2-1003-jdbc4</version>
-    </dependency>
-    <dependency>
-      <groupId>com.jolbox</groupId>
-      <artifactId>bonecp</artifactId>
-      <version>0.8.0.RELEASE</version>
+      <groupId>com.quickrant.api</groupId>
+      <artifactId>quickrant-api</artifactId>
+      <version>0.3</version>
     </dependency>
     <dependency>
       <groupId>jstl</groupId>
@@ -66,6 +64,11 @@
       <artifactId>slf4j-simple</artifactId>
       <version>1.6.1</version>
     </dependency>
+    <dependency>
+      <groupId>log4j</groupId>
+      <artifactId>log4j</artifactId>
+      <version>1.2.17</version>
+    </dependency>
   </dependencies>
   
   <build>
@@ -81,6 +84,19 @@
           <compilerArgument>-Werror</compilerArgument>
         </configuration>
       </plugin>
+      <plugin>
+        <groupId>org.javalite</groupId>
+          <artifactId>activejdbc-instrumentation</artifactId>
+          <version>1.4.9</version>
+          <executions>
+            <execution>
+              <phase>process-classes</phase>
+              <goals>
+                <goal>instrument</goal>
+              </goals>
+            </execution>
+          </executions>
+        </plugin>
     </plugins>
   </build>
   
