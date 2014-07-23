@@ -36,7 +36,7 @@
     <dependency>
       <groupId>com.quickrant.api</groupId>
       <artifactId>quickrant-api</artifactId>
-      <version>0.3</version>
+      <version>0.4</version>
     </dependency>
     <dependency>
       <groupId>jstl</groupId>
@@ -54,11 +54,6 @@
       <version>2.5</version>
       <scope>provided</scope>
     </dependency> 
-    <dependency>
-      <groupId>org.slf4j</groupId>
-      <artifactId>slf4j-api</artifactId>
-      <version>1.7.5</version>
-    </dependency>
     <dependency>
       <groupId>log4j</groupId>
       <artifactId>log4j</artifactId>
