@@ -23,7 +23,7 @@
   <modules>
     <module>/quickrant-admin</module>
     <module>/quickrant-api</module>
-    <module>/quickrant</module>
+    <module>/quickrant-web</module>
   </modules>
   
   <dependencies>
@@ -36,7 +36,7 @@
     <dependency>
       <groupId>com.quickrant.api</groupId>
       <artifactId>quickrant-api</artifactId>
-      <version>0.4</version>
+      <version>0.5</version>
     </dependency>
     <dependency>
       <groupId>jstl</groupId>
