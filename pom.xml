@@ -23,7 +23,6 @@
   <modules>
     <module>/quickrant-admin</module>
     <module>/quickrant-api</module>
-    <module>/quickrant-web</module>
   </modules>
   
   <dependencies>
